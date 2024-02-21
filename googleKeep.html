@@ -4,20 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Keep</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="googleKeepStyle.css">
+    
 </head>
 <body>
-    <div class="container">
-        <div class="input-box">
-            <input type="text" id="addTitle" placeholder="Title">
-            <textarea id="addText" cols="30" rows="10" placeholder="Take a note ...."></textarea>
-            <div class="btns">
-                <button id="add-btn">Add</button>
-                <button id="cancel-btn">Cancel</button> 
+    <header class="header">
+        <div class="header-logo" style="display: flex; align-items: center;" >
+            <span class="material-symbols-outlined">menu</span>
+            <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="">
+            <h1>Keep</h1>
+        </div>
+        <div class="header-search">
+            <span class="material-symbols-outlined">
+                search
+                </span>
+            <input type="text">
+            <span class="material-symbols-outlined">
+                close
+                </span>
+        </div>
+        <div class="header-nav">
+            <div class="header-functions">
+                <span class="material-symbols-outlined">
+                    restart_alt
+                    </span>
+              <span class="material-symbols-outlined">
+                settings
+                </span>
+              <span class="material-symbols-outlined">
+                apps
+                </span>
+            </div>
+            <div class="header-user">
+                <span class="material-symbols-outlined">
+                    apps
+                    </span>
+                <div class="">User</div>
+
             </div>
         </div>
-        <div id="notes"></div>
+      </header>
+      <div class="container">
+        <div class="side-bar">
+          <div class="side-bar__item side-bar__item--active">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZ1JREFUSEvN1D1I1lEUx/GPhi2BhdDQ0JDgFEigYLQGBk2ZBCW0SARJDkKzBc01JNoQLUFKRFRDUEurQ2+0tDTUUksvouFiUP0P3Gconvu//x54wDPdt3O/v3PuObdHl62ny/drAtiLSxjBoSToDV7gOr7WiSwBzmIBuzOXfMc0HucgdYBZ3EiOD7CE52l+tFJ+ESfSfAor7SA5wCDeozel51pG4eVq/Qo2cQBf/j2XA4TaC7iH04VCeIpjmMfVpoDP2Jce9W0BMI5neIXRpoAt9FWKdlTKfhUAA/iGjXbFkEvRelWC/ckhHOtsD9YQPjH+y3KAqPEId6JK06MC4AyWq3dYxZGmgLnURC8xVpOmUPwuvdcMbjYF7MRrHMQtnM9EcRfRAxHx4XZC6hptCPEl7EI7dbG2iB8Yxsf/abTW2ckqivv4iWi+T2ljPz6k8Sk87OSraPncQfxJ53A7LbbUxzzWs1b67MKxVSVRTVFVYU9wHCfr1MfBJoDfhTKtvWNbAAoB1G83iSBuyKWp6F88kPR1HdBxmppG0DHgD1L1RRn96jTXAAAAAElFTkSuQmCC"/>
+            <p>Ghi chú</p>
+          </div>
+          <div class="side-bar__item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZ1JREFUSEvN1D1I1lEUx/GPhi2BhdDQ0JDgFEigYLQGBk2ZBCW0SARJDkKzBc01JNoQLUFKRFRDUEurQ2+0tDTUUksvouFiUP0P3Gconvu//x54wDPdt3O/v3PuObdHl62ny/drAtiLSxjBoSToDV7gOr7WiSwBzmIBuzOXfMc0HucgdYBZ3EiOD7CE52l+tFJ+ESfSfAor7SA5wCDeozel51pG4eVq/Qo2cQBf/j2XA4TaC7iH04VCeIpjmMfVpoDP2Jce9W0BMI5neIXRpoAt9FWKdlTKfhUAA/iGjXbFkEvRelWC/ckhHOtsD9YQPjH+y3KAqPEId6JK06MC4AyWq3dYxZGmgLnURC8xVpOmUPwuvdcMbjYF7MRrHMQtnM9EcRfRAxHx4XZC6hptCPEl7EI7dbG2iB8Yxsf/abTW2ckqivv4iWi+T2ljPz6k8Sk87OSraPncQfxJ53A7LbbUxzzWs1b67MKxVSVRTVFVYU9wHCfr1MfBJoDfhTKtvWNbAAoB1G83iSBuyKWp6F88kPR1HdBxmppG0DHgD1L1RRn96jTXAAAAAElFTkSuQmCC"/>
+            <p>Ghi chú</p>
+          </div>
+          <div class="side-bar__item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZ1JREFUSEvN1D1I1lEUx/GPhi2BhdDQ0JDgFEigYLQGBk2ZBCW0SARJDkKzBc01JNoQLUFKRFRDUEurQ2+0tDTUUksvouFiUP0P3Gconvu//x54wDPdt3O/v3PuObdHl62ny/drAtiLSxjBoSToDV7gOr7WiSwBzmIBuzOXfMc0HucgdYBZ3EiOD7CE52l+tFJ+ESfSfAor7SA5wCDeozel51pG4eVq/Qo2cQBf/j2XA4TaC7iH04VCeIpjmMfVpoDP2Jce9W0BMI5neIXRpoAt9FWKdlTKfhUAA/iGjXbFkEvRelWC/ckhHOtsD9YQPjH+y3KAqPEId6JK06MC4AyWq3dYxZGmgLnURC8xVpOmUPwuvdcMbjYF7MRrHMQtnM9EcRfRAxHx4XZC6hptCPEl7EI7dbG2iB8Yxsf/abTW2ckqivv4iWi+T2ljPz6k8Sk87OSraPncQfxJ53A7LbbUxzzWs1b67MKxVSVRTVFVYU9wHCfr1MfBJoDfhTKtvWNbAAoB1G83iSBuyKWp6F88kPR1HdBxmppG0DHgD1L1RRn96jTXAAAAAElFTkSuQmCC"/>
+            <p>Ghi chú</p>
+          </div>
+          <div class="side-bar__item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZ1JREFUSEvN1D1I1lEUx/GPhi2BhdDQ0JDgFEigYLQGBk2ZBCW0SARJDkKzBc01JNoQLUFKRFRDUEurQ2+0tDTUUksvouFiUP0P3Gconvu//x54wDPdt3O/v3PuObdHl62ny/drAtiLSxjBoSToDV7gOr7WiSwBzmIBuzOXfMc0HucgdYBZ3EiOD7CE52l+tFJ+ESfSfAor7SA5wCDeozel51pG4eVq/Qo2cQBf/j2XA4TaC7iH04VCeIpjmMfVpoDP2Jce9W0BMI5neIXRpoAt9FWKdlTKfhUAA/iGjXbFkEvRelWC/ckhHOtsD9YQPjH+y3KAqPEId6JK06MC4AyWq3dYxZGmgLnURC8xVpOmUPwuvdcMbjYF7MRrHMQtnM9EcRfRAxHx4XZC6hptCPEl7EI7dbG2iB8Yxsf/abTW2ckqivv4iWi+T2ljPz6k8Sk87OSraPncQfxJ53A7LbbUxzzWs1b67MKxVSVRTVFVYU9wHCfr1MfBJoDfhTKtvWNbAAoB1G83iSBuyKWp6F88kPR1HdBxmppG0DHgD1L1RRn96jTXAAAAAElFTkSuQmCC"/>
+            <p>Ghi chú</p>
+          </div>
+        </div>
+        <div class="todo">
+          <div class="todo__top">
+            <div class="todo__top__group">
+                <!-- <div class="todo__top__group_top">
+                    <input type="text" id="addTitle" placeholder="Title">
+                    <div class="todo__top__function">
+                        <span class="material-symbols-outlined">
+                            check_box
+                            </span>
+                            <span class="material-symbols-outlined">
+                                check_box
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    check_box
+                                    </span>
+                    </div>
+                </div> -->
+                <div class="todo_top_group_bottom">
+                    <input type="text" id="addTitle" placeholder="Title">
+                    <textarea id="addText" cols="30" rows="10" placeholder="Take a note ...."></textarea>
+               
+                </div>
+                <div class="btns">
+                    <button id="add-btn">Add</button>
+                    <button id="cancel-btn">Cancel</button> 
+                </div>
+       
+            </div>
+          </div>
+          <div id="notes"></div>
+          
+        </div>
+      
+      </div>
+      
     </div>
     <script src="googleKeep.js"></script>
 </body>
+
 </html>
+
+
+
